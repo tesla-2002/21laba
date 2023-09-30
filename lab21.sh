@@ -4,9 +4,15 @@
 #Выполнил студент группы М8О-104Б-22
 #Тесля Данила Сергеевич
 
-dir="/home/tesla-2002/labs/21laba"   
-suff=".txt"                           
-pref="renamed_"                           
+if [ $# -ne 3 ]; then
+    echo "Введите $0 директория суффикс префикс"
+    exit 1
+fi
+
+
+dir="$1"
+suff="$2"                          
+pref="$3"
 
 cd "$dir" || exit 1
 
